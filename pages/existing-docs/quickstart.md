@@ -2,8 +2,13 @@
 title: "QuickStart"
 excerpt: "<a name=\"top\"></a>To introduce you to the major features of the Seven Bridges Platform, this QuickStart will walk you through the process of a simple whole exome sequencing analysis.\n\n<a href=\"#tldr\">...in a nutshell</a>"
 ---
-##Prerequisites
-All the resources used in the QuickStart, including the files and workflow, are available to you when you <a href="https://www.sbgenomics.com/login" target="blank">sign up for a free account</a>: there is no need to take out a subscription — just use some of your free $100 credits. 
+
+<!-- Adding to check this link works -->
+<div align="right"><a href="#tldr">in a nutshell . . . </a></div>
+
+## Prerequisites
+All the resources used in the QuickStart, including the files and workflow, are available to you when you <a href="https://www.sbgenomics.com/login" target="blank">sign up for a free account</a>: there is no need to take out a subscription — just use some of your free $100 credits.
+
 [block:callout]
 {
   "type": "info",
@@ -11,8 +16,10 @@ All the resources used in the QuickStart, including the files and workflow, are 
   "title": "Try it out yourself!"
 }
 [/block]
-##Procedure
-We'll start by creating a project and populating it with FASTQ files. Then, we'll use one of the Seven Bridges whole exome analysis workflows to carry out the analysis. Finally, we'll examine our results. 
+
+## Procedure
+We'll start by creating a project and populating it with FASTQ files. Then, we'll use one of the Seven Bridges whole exome analysis workflows to carry out the analysis. Finally, we'll examine our results.
+
 [block:callout]
 {
   "type": "warning",
@@ -20,7 +27,8 @@ We'll start by creating a project and populating it with FASTQ files. Then, we'l
   "body": "* [Create a project](#section-create-a-project)\n* [Enter file metadata](#section-enter-file-metadata)\n* [Add FASTQ files to your project](#section-add-fastq-files-to-your-project)\n* [Select a public workflow ](#section-select-a-public-workflow)\n* [Edit the selected workflow](#section-edit-the-selected-workflow)\n* [Run the analysis](#section-run-the-analysis)\n* [View the results](#section-view-the-results-of-the-data-analysis)"
 }
 [/block]
-##Create a project
+
+## Create a project
 The first step to running an analysis on the Seven Bridges Platform is to create a project. To do this, click **Create a project** under the **Projects** tab in the top navigation bar. 
 
 This will open a new window where you can name your project and select a [billing group](doc:payments). Let's name our project **QuickStart**. We'll use the free **Pilot Funds** as our billing group. When you're finished, click **Create**.
@@ -50,7 +58,9 @@ This will open a new window where you can name your project and select a [billin
   "body": "Your project is given a URL based on its name. While you can rename your project at any point in time, the URL cannot be altered after your project has been created."
 }
 [/block]
+
 Once you create a project, you'll be taken to its [Project Dashboard](doc:project-dashboard). This page contains all the information about your project, including its files, apps (tools and workflows), tasks (workflow executions), and project members.
+
 [block:image]
 {
   "images": [
@@ -76,13 +86,15 @@ Once you create a project, you'll be taken to its [Project Dashboard](doc:projec
   "title": "Manage project members"
 }
 [/block]
+
 <div align="right"><a href="#top">top</a></div>
 
-##Add FASTQ files to your project
+## Add FASTQ files to your project
 
 The next step is to add the FASTQ files to your project. The other reference files needed for the analysis will be suggested when you set up the workflow.
 
 To find the FASTQ files necessary for the analysis, click the **Files** tab on your project dashboard and then **+Add files**.
+
 [block:image]
 {
   "images": [
@@ -100,7 +112,9 @@ To find the FASTQ files necessary for the analysis, click the **Files** tab on y
   ]
 }
 [/block]
+
 Clicking **+Add files** opens the file browser. Here you can view the Public Reference Files repository, **Public Files** and any files that you've already added to other projects.
+
 [block:image]
 {
   "images": [
@@ -124,6 +138,7 @@ Clicking **+Add files** opens the file browser. Here you can view the Public Ref
   "body": "There are several ways to add files to the Platform; you can add them from a [computer](doc:copy-files-using-the-visual-interface) or via [FTP/HTTP](doc:copy-files-using-the-api)."
 }
 [/block]
+
 For this analysis, we want to use two paired-end files that contain whole exome sequencing data. We'll select **Public Files** on the sidebar and use the search box to quickly locate them.
 
 Since we want to find a pair of FASTQ files named **C835.HCC1143.2.converted.pe_1.fastq** and **C835.HCC1143.2.converted.pe_2.fastq**, we'll enter "C835.HCC1143.2.converted.pe" into the search box to find them.
@@ -131,6 +146,7 @@ Since we want to find a pair of FASTQ files named **C835.HCC1143.2.converted.pe_
 If you don't know the names of the files you need, you can instead browse all files. Learn more about [searching for files ](doc:search-files-on-the-platform) on the Seven Bridges Platform.
 
 Select both files using the checkboxes adjacent to the filenames, as shown below. To copy the files, click **Copy to Project** and confirm. To return to the Project Dashboard, just close the **File** window.
+
 [block:image]
 {
   "images": [
@@ -154,9 +170,10 @@ Select both files using the checkboxes adjacent to the filenames, as shown below
   "body": "Copy multiple files at once by checking all files before clicking **Copy to Project**"
 }
 [/block]
+
 <div align="right"><a href="#top">top</a></div>
 
-##Enter file metadata
+## Enter file metadata
 It is important to annotate your files with [Metadata on the Seven Bridges Platform](doc:metadata-on-the-seven-bridges-platform) when you perform an analysis on the Platform so that bioinformatics tools processing files in parallel can group files with identical metadata value(s) in specified fields.
 
 File metadata includes information about the File (e.g. experimental strategy and library ID), **Sample** (e.g. sample ID), and **General** (e.g. investigation and species) . For more information on the metadata fields used on the Platform, please see the documentation on [file metadata](metadata-on-the-seven-bridges-platform).
@@ -168,6 +185,7 @@ To edit a file's metadata, select the file and click **Edit Metadata**. You can 
 Select both of the files and click **Edit Metadata**. This will open a pop-up window with inputs for the different metadata fields. Notice the empty field for Platform unit ID. This needs to be set to run the task. Enter 1 in this field, and click **Save**.
 
 This metadata will inform tools that these files come from the same sample, were produced by the same library, and have been sequenced on the same lane.
+
 [block:image]
 {
   "images": [
@@ -191,15 +209,17 @@ This metadata will inform tools that these files come from the same sample, were
   "body": "Each file used in an analysis on the Seven Bridges Platform must have their own metadata values. For more information, see the [metadata documentation](doc:metadata-on-the-seven-bridges-platform) on grouping and distinguishing files by metadata.\n\nIn the example here, note that while we have set the same **Library ID**, **Platform unit ID**, and **Platform** values for the two WES_human_Illumina files, the two files come with different **Paired-end** values ('1' and '2') by default."
 }
 [/block]
+
 <div align="right"><a href="#top">top</a></div>
 
-##Select a public workflow 
+## Select a public workflow 
 
 The next step is selecting a public workflow for running the analysis. We'll use the workflow, **Whole Exome Sequencing GATK 2.3.9.-lite**, which is based on the free version of the GATK tool developed by the Broad Institute.
 
 This workflow is one of Seven Bridges' many open source workflows available to all users on the Platform. These workflows have been tested to run efficiently in the cloud environment by the Seven Bridges bioinformatics team.
 
 To select a public workflow for use in your project, navigate to **Apps** tab on your project dashboard and click **+Add App**.
+
 [block:image]
 {
   "images": [
@@ -217,10 +237,14 @@ To select a public workflow for use in your project, navigate to **Apps** tab on
   ]
 }
 [/block]
+
 To add the Whole Exome Sequencing workflow:
 
-1. Type 'whole exome' into the search box. The Whole Exome Sequencing GATK 2.3.9.-lite will be displayed in the search results. .
-[block:image]
+1. Type 'whole exome' into the search box. The Whole Exome Sequencing GATK 2.3.9.-lite will be displayed in the search results.
+
+![image in step](https://files.readme.io/faaa5b0-add-workflow-layout-1.jpg)
+
+<!--[block:image]
 {
   "images": [
     {
@@ -235,8 +259,10 @@ To add the Whole Exome Sequencing workflow:
     }
   ]
 }
-[/block]
+[/block]-->
+
 2. Next, click **Copy **below the workflow.
+
 [block:image]
 {
   "images": [
@@ -253,6 +279,7 @@ To add the Whole Exome Sequencing workflow:
   ]
 }
 [/block]
+
 3. (Optional) Set the name of the workflow in your project.
 4. Click **Copy** and the workflow will be added to your project.
 
@@ -260,8 +287,9 @@ To go back to the project dashboard, close the app browser window.
 
 <div align="right"><a href="#top">top</a></div>
 
-##Edit the selected workflow
+## Edit the selected workflow
 In many cases, you might want to tweak a workflow to work better with your dataset. This can be done easily using the workflow editor. To edit your workflow in your project, navigate to the **Apps** tab and click the pencil icon next to **Whole Exome Analysis - BWA + GATK 2.3.9-lite**.
+
 [block:image]
 {
   "images": [
@@ -279,11 +307,13 @@ In many cases, you might want to tweak a workflow to work better with your datas
   ]
 }
 [/block]
+
 This opens the workflow editor containing a graphical representation of the workflow where each tool, input, and reference file is represented as a node. To see a description of the workflow's function and other details such as toolkit name and version, tool author, and its license, you can click Additional Information.
 
 To the right of the workflow diagram, the panel labeled **APPS** displays a list of all the apps available in your projects (**MyApps**) or among **PublicApps**.
 
 The **PARAMS** panel describes the parameters of the tools used in this workflow and allows you to make quick edits.
+
 [block:image]
 {
   "images": [
@@ -301,9 +331,11 @@ The **PARAMS** panel describes the parameters of the tools used in this workflow
   ]
 }
 [/block]
+
 On the workflow editor, click the **BWA-MEM Bundle** node (see the screenshot below). This opens the **PARAMS** tab, which displays the parameters of **BWA-MEM Bundle** sorted into **Input/Output options**, **Scoring options**, **Execution**, etc. Let's find the parameter **use_soft_clipping **and select it.
 
 This will soft clip the supplementary alignments. To save this change as a new revision of the workflow, click **Save**. Note that clicking **Save** changes the version number from 0 to 1. This function allows you to keep track all your workflow edits.
+
 [block:image]
 {
   "images": [
@@ -321,11 +353,12 @@ This will soft clip the supplementary alignments. To save this change as a new r
   ]
 }
 [/block]
+
 <div align="right"><a href="#top">top</a></div>
 
-##Run the analysis
-
+## Run the analysis
 Now that the workflow is ready, it's time to run the analysis. We'll click **Run**, in the upper right corner. The pop-up window with the suggested files for this workflow will be displayed.
+
 [block:callout]
 {
   "type": "info",
@@ -349,7 +382,9 @@ Now that the workflow is ready, it's time to run the analysis. We'll click **Run
   ]
 }
 [/block]
+
 Click **Copy** and the suggested files will be copied to your project and added as input files to our workflow. The files are mapped the following way.
+
 [block:parameters]
 {
   "data": {
@@ -376,10 +411,20 @@ Click **Copy** and the suggested files will be copied to your project and added 
   "rows": 5
 }
 [/block]
+
 On the **DRAFT Task page** you will see two tabs: **Set Input Data** and **Define App Settings**, as shown in the screenshot below. The second tab shows various tool parameters that we've exposed by unlocking them in the workflow editor.
 
 We'll ignore these for now (for details, see the documentation on [tool settings](doc:the-tool-editor). The tab marked **Set Input Data** is where you can enter the input files and reference files for your workflow.
-[block:image]
+
+<!-- This is how to encode a basic image, assuming it's in my project. It isn't yet, so this won't work! -->
+![Picking FASTQ files](/images/picking-fastq.png)
+
+<!-- . . .  so this is the actual imagelocation from the [block] below. This should work! -->
+![Picking FASTQ files](https://files.readme.io/79db182-picking-fastq.png)
+
+<!-- original encoding of image -->
+  
+<!-- [block:image]
 {
   "images": [
     {
@@ -394,7 +439,8 @@ We'll ignore these for now (for details, see the documentation on [tool settings
     }
   ]
 }
-[/block]
+[/block]-->
+
 The only remaining files you need to select are FASTQ files. Click **Pick file(s)** and choose these files:
 **  * C835.HCC1143.2.converted.pe_1.fastq
 **  * C835.HCC1143.2.converted.pe_2.fastq**
@@ -409,8 +455,7 @@ The status will be a progress bar if the task is still running or a label notify
 
 <div align="right"><a href="#top">top</a></div>
 
-##View the results of the data analysis
-
+## View the results of the data analysis
 Once the task is completed, you'll be notified via email. The easiest way to access results is to go to the **Tasks** tab. This shows all the information related to this particular execution.
 
 On the **Tasks** page, the column marked **Outputs** shows the results produced by the tools in the executed workflow. In our example task, take a look at **summary_metrics** report. Clicking on the file name opens the alignment metrics from the task.
@@ -418,6 +463,7 @@ On the **Tasks** page, the column marked **Outputs** shows the results produced 
 At the bottom of the screen you can see the task's raw output.
 
 The result of the data analysis is shown in the **raw VCF file**. The raw VCF contains all the variants detected by the workflow. To download it, just click on its filename. This will open a new page displaying the contents of the file and some information describing it. Then click **Download** in the upper right corner.
+
 [block:image]
 {
   "images": [
@@ -441,13 +487,14 @@ The result of the data analysis is shown in the **raw VCF file**. The raw VCF co
   "body": "Note that the names of files outputted from a tool incorporate part of the tool's name. This makes it easier to find report files from a list of outputs."
 }
 [/block]
+
 That’s it! We've executed a data analysis and obtained some results. We encourage you to try this procedure for yourself before getting started on your own data analyses. You can also visit the rest of our [Knowledge Center](http://docs.sevenbridges.com/v1.0) to learn more about the Seven Bridges Platform and bringing your own tools.
 
 <div align="right"><a href="#top">top</a></div>
 
 <hr><a name="tldr"></a>
 
-###In a nutshell
+### In a nutshell
 * **Create a project** to hold your analyses on the Seven Bridges Platform.
 * **Add files** to your project and supply their metadata to prepare them for analyses. Don't forget to add reference files!
 * **Add and edit a public workflow** (Whole Exome Analysis - BWA + GATK 2.3.9-Lite) to run your whole exome sequencing analysis.
