@@ -1,32 +1,26 @@
 ---
 title: "List user resources"
-excerpt: "/users/{username}\n\nFor general information on the API, including formatting, parameters, and pagination, please see the [API Overview](the-api)."
+layout: default
+excerpt: "API list user resources returns information about the specified user."
+endpoint: users/{username}
 ---
-This call returns information about the specified user. Note that currently you can view only your own user information, and so this call is equivalent to the call to [Get my information](doc:get-my-information).
-[block:code]
-{
-  "codes": [
-    {
-      "code": "https://api.sbgenomics.com/v2/users/{username}",
-      "language": "text",
-      "name": "Path for Amazon Web Services users"
-    },
-    {
-      "code": "https://gcp-api.sbgenomics.com/v2/users/{username}",
-      "language": "text",
-      "name": "Path for Google Cloud Platform users"
-    }
-  ]
-}
-[/block]
-This call will only return a successful response if `{username}` is replaced with your own username.
-[block:callout]
-{
-  "type": "success",
-  "title": "Case sensitivity",
-  "body": "Don't forget to capitalize your `username` in the same way as you set it when you registered on the Seven Bridges Platform."
-}
-[/block]
+# {{ site.data.api.rest-method-icons.get }} List user resources
+
+This call returns information about the specified user. Currently you can only view  your own user information, so this call is equivalent to the call to [Get my information]
+
+## Endpoint
+
+This way is cumbersome but works. The value for ```{{ "{{" }} page.endpoint }}``` is correctly substituted in the snippet.
+
+{% include /APIs/aws-gcs-endpoint.md %}
+
+This way is tidy but doens't work! The value for ```{{ "{{" }} page.endpoint }}``` is *not* correctly substituted in the snippet.
+
+{{ site.data.api.aws-gcs-endpoint}}
+
+TEST LINE page.endpoint is {{ page.endpoint }}
+
+Replace `{username}` with your own user name. Remember to use the same capitalization that you used when you registered on the Seven Bridges Platform.
  
 ## Request
 

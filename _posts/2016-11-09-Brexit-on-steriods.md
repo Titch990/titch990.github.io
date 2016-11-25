@@ -34,7 +34,7 @@ Here's a table:
 |row 4 cell 1|row 4 cell 2|row 4 cell 3|
 |row 5 cell 1|row 5 cell 2|row 5 cell 3 with some very long text|
 
-This will be a code char ```chdechar``` followed by ordinary text.
+This will be a code char ```codechar``` followed by ordinary text.
 
 ## trying a simple variable (declared in this post)
 

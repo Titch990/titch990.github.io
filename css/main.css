@@ -41,3 +41,56 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+/* REST method styles */
+
+span.rest-method-get {
+ color: white;
+ background-color: limegreen;
+ padding-left: 10pt;
+ padding-right: 10pt;
+ padding-top: 5pt;
+ padding-bottom: 5pt;
+ border-radius: 10pt;
+}
+
+span.rest-method-put {
+ color: white;
+ background-color: mediumpurple ;
+ padding-left: 10pt;
+ padding-right: 10pt;
+ padding-top: 5pt;
+ padding-bottom: 5pt;
+ border-radius: 10pt;
+}
+
+span.rest-method-post {
+ color: white;
+ background-color: cornflowerblue;
+  padding-left: 10pt;
+ padding-right: 10pt;
+ padding-top: 5pt;
+ padding-bottom: 5pt;
+ border-radius: 10pt;
+}
+
+span.rest-method-delete {
+ color: white;
+ background-color: palevioletred;
+ padding-left: 10pt;
+ padding-right: 10pt;
+ padding-top: 5pt;
+ padding-bottom: 5pt;
+ border-radius: 10pt;
+}
+
+span.rest-method-patch {
+ color: white;
+ background-color: darkorange;
+ padding-left: 10pt;
+ padding-right: 10pt;
+ padding-top: 5pt;
+ padding-bottom: 5pt;
+ border-radius: 10pt;
+}
+
