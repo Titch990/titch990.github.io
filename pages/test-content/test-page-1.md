@@ -3,6 +3,7 @@ product-id: "P1"
 product-long-name: "Product A"
 product-short-name: "PA"
 title: MJ's test topic
+layout: default
 ---
 # MJ's test topic 1
 

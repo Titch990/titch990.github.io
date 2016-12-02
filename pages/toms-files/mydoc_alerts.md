@@ -8,6 +8,7 @@ This is the raw Markdown that was used to generate Tom J's [alerts page](http://
 
 ## About alerts
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, reference the appropriate value stored in the alerts.yml file as described in the following sections.
+
 ## Alerts
 
 Similar to inserting images, you insert alerts through various includes that have been developed. These includes provide templates through which you pass parameters to easily populate the right HTML code.
@@ -15,6 +16,7 @@ Similar to inserting images, you insert alerts through various includes that hav
 ```
 {%raw%}{% include body-elements/note.html content="This is my note. All the content I type here is treated as a single paragraph." %}{% endraw%}
 ```
+
 Here's the result:
 
 {% include body-elements/note.html content="This is my note. All the content I type here is treated as a single paragraph." %}
